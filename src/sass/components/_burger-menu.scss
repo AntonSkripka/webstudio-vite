@@ -1,0 +1,121 @@
+.burger-menu {
+    @include multi-transition(transform);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+
+    background-color: get-var(light__color-2);
+    padding: 48px 40px;
+
+    @media screen and (max-width: 430px) {
+        padding: 24px 20px;
+        padding-top: 48px;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &__open {
+        background-color: get-var('light__color-2');
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        left: 90%;
+        top: 10px;
+        background-color: get-var('light__color-2');
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bnav-list {
+        @include flex-column;
+        gap: 34px;
+        margin-bottom: 302px;
+
+        &__nav-link {
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: 0.02em;
+            color: get-var('portfolio__dark-color');
+
+            &--active {
+                color: get-var('main__color');
+            }
+        }
+    }
+
+    .bcontacts-list {
+        @include flex-column;
+        gap: 32px;
+        margin-bottom: 34px;
+
+        &__contacts-item {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        &__link1 {
+            font-size: 34px;
+            color: get-var('main__color');
+        }
+
+        &__link2 {
+            font-size: 24px;
+            color: get-var('dark__color-3');
+        }
+    }
+
+    .bsocial-list {
+        @include flex;
+
+        &__social-item:not(:last-child) {
+            border-right: 1px solid get-var('shadow__color-10');
+        }
+
+        &__social-link {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 122%;
+            letter-spacing: 0.02em;
+            color: get-var('main__color');
+        }
+
+        &__social-item {
+            padding: 10px;
+        }
+
+        &__social-item:first-child {
+            padding-left: 0px;
+        }
+    }
+}
+
+.displaynone {
+    // visibility: hidden;
+    // pointer-events: none;
+    transform: translateX(100vw);
+}
+
+// .is-open {
+//     transform: translateX(0);
+// }

@@ -1,0 +1,103 @@
+.hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    height: 400px;
+    color: get-var('light__color-2');
+    background-color: get-var('dark__color');
+    margin: 0 auto;
+    background-image:
+        linear-gradient(get-var('dark__color-4'),
+            get-var('dark__color-4')),
+        url(../images/background-mobile-1x.jpg);
+    background-size: 100% 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image:
+            linear-gradient(get-var('dark__color-4'),
+                get-var('dark__color-4')),
+            url(../images/background-mobile-2x.jpg);
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image:
+            linear-gradient(get-var('dark__color-4'),
+                get-var('dark__color-4')),
+            url(../images/background-tablet-1x.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:
+                linear-gradient(get-var('dark__color-4'),
+                    get-var('dark__color-4')),
+                url(../images/background-tablet-2x.jpg);
+        }
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image:
+            linear-gradient(get-var('dark__color-4'),
+                get-var('dark__color-4')),
+            url(../images/background-desktop-1x.jpg);
+        background-size: 1600px 600px;
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:
+                linear-gradient(get-var('dark__color-4'),
+                    get-var('dark__color-4')),
+                url(../images/background-desktop-2x.jpg);
+        }
+    }
+
+    .container {
+        @include flex-column-center;
+    }
+
+    &__title {
+
+        max-width: 360px;
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 162%;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            max-width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgb(33, 150, 243, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgb(33, 150, 243, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgb(33, 150, 243, 0);
+    }
+}

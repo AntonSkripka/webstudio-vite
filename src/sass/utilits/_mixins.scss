@@ -1,0 +1,71 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+@mixin section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+
+@mixin section-title-h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+@mixin white {
+    color: get-var('light__color-2');
+}
+
+@mixin no-margin {
+    margin: 0;
+}
+
+@mixin multi-transition($properties, $duration: 250ms, $timing-function: cubic-bezier(0.4, 0, 0.2, 1), $delay: 0s) {
+    $transitions: (
+    );
+
+@if type-of($properties)=="list" {
+    @each $prop in $properties {
+        $transitions: append($transitions, #{$prop} $duration $timing-function $delay, comma);
+    }
+}
+
+@else {
+    $transitions: #{$properties} $duration $timing-function $delay;
+}
+
+transition: $transitions;
+}

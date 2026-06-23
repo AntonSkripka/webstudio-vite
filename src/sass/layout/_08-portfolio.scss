@@ -1,0 +1,136 @@
+.portfolio__main {
+    @include section;
+
+    .portfolio {
+        .list-first {
+            margin-bottom: 50px;
+            @include flex-wrap;
+            justify-content: center;
+            column-gap: 8px;
+            row-gap: 15px;
+            
+
+            &__button {
+                border-radius: 4px;
+                height: 38px;
+                padding: 0 22px;
+                border: 0;
+                background-color: var(--portfolio-light-color);
+                color: var(--portfolio-dark-color);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.62;
+                text-align: center;
+                transition-property: background-color, color;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover {
+                    background-color: var(--main_color);
+                    color: var(--second_light_color);
+                }
+            }
+        }
+
+        .list-second {
+            @include flex-wrap;
+            gap: 30px;
+
+            &__item-second {
+                /* width: 370px; */
+                width: 100%;
+                // flex-basis: calc((100% - 60px) / 3);
+                /* height: 404px; */
+                border: 1px solid #eee;
+                /* box-shadow: 
+        1px 4px 6px 0 var(--fifth_shadow_color), 
+        0 4px 4px 0 var(--sixth_shadow_color), 
+        0 1px 1px 0 var(--fourth_shadow_color); */
+                /* outline: 1px dotted blue; */
+                transition-property: box-shadow;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover,
+                &:focus {
+                    box-shadow:
+                        1px 4px 6px 0 var(--fifth_shadow_color),
+                        0 4px 4px 0 var(--sixth_shadow_color),
+                        0 1px 1px 0 var(--fourth_shadow_color);
+                }
+
+                &:hover .list-second__img-overlay,
+                &:focus .list-second__img-overlay {
+                    transform: translate(0);
+                }
+
+                @media screen and (min-width: 768px) {
+                    flex-basis: calc((100% - 30px) / 2);
+                }
+
+                @media screen and (min-width: 1200px) {
+                    flex-basis: calc((100% - 60px) / 3);
+                }
+            }
+
+            &__item-link {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__card-overlay-box {
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+
+            &__project-img {
+                width: 100%;
+            }
+
+            &__img-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 63px 24px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 156%;
+                transform: translateY(100%);
+                transition: transform 250ms ease-in-out;
+                color: var(--second_light_color);
+                background-color: var(--fourth_light_color);
+            }
+
+            &__card-text-box {
+                /* ! */
+                /* display: flex;
+        flex-direction: column;
+        justify-content: flex-end; */
+                /* ! */
+                flex-grow: 1;
+                padding-left: 24px;
+                /* outline: 1px dotted blue; */
+            }
+
+            &__project-title {
+                margin-bottom: 4px;
+                font-size: 18px;
+                line-height: 200%;
+                letter-spacing: 0.06em;
+                color: var(--portfolio-dark-color);
+            }
+
+            &__project-description {
+                margin-bottom: 20px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 187%;
+                color: var(--third_dark_color);
+            }
+        }
+    }
+}
