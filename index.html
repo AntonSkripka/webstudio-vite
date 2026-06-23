@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudio</title>
+    <!--! Спочатку нормалізатор -->
+    <!--! завантаження modern-normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- <link rel="stylesheet" href="./css/reset.css">
+
+    <link rel="stylesheet" href="./css/style.css"> -->
+
+    <!--! зовнішній файл стилів main.min.css -->
+    
+  <link rel="stylesheet" href="/webstudio-vite/assets/main-e8667a5e.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__nav-logo" href="./index.html"><span
+                        class="header__nav-logo--span">Web</span>Studio</a>
+                <ul class="nav-list"></ul>
+            </nav>
+            <ul class="contacts-list"></ul>
+            <button class="burger-menu__open" data-burger-open>
+                <svg width="16px" height="24px">
+                    <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#burger"></use>
+                </svg>
+            </button>
+            <div class="burger-menu displaynone" data-burger>
+                <button class="burger-menu__close" data-burger-close>
+                    <svg width="40px" height="40px">
+                        <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#burger-close"></use>
+                    </svg>
+                </button>
+
+                <ul class="bnav-list"></ul>
+
+                <ul class="bcontacts-list"></ul>
+
+                <ul class="bsocial-list"></ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- секція херо -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title animate__animated animate__backInUp">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
+                <button class="hero-button" data-modal-open>Замовити послугу</button>
+            </div>
+        </section>
+        <section class="our-features">
+            <div class="container">
+                <ul class="our-features-list"></ul>
+            </div>
+        </section>
+        <section class="what-we-do">
+            <div class="container">
+                <h2 class="what-we-do__title">Чим ми займаємося</h2>
+                <ul class="what-we-do-list"></ul>
+            </div>
+        </section>
+        <section class="team">
+            <div class="container">
+                <h2 class="team__section-title">Наша команда</h2>
+                <ul class="team-list"></ul>
+            </div>
+        </section>
+        <section class="regular-customers">
+            <div class="container">
+                <h2 class="regular-customers__title">Постійні клієнти</h2>
+                <ul class="regular-customers-list"></ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__address">
+                    <a class="footer__logo" href="./index.html"><span
+                            class="header__nav-logo--span">Web</span>Studio</a>
+                    <address class="footer__address-e">
+                        <ul class="address-list"></ul>
+                    </address>
+                </div>
+                <div class="footer__join-us">
+                    <h3 class="footer__h3-title">ПРИЄДНУЙТЕСЬ</h3>
+                    <ul class="join-us-list"></ul>
+                </div>
+                <div class="footer__form">
+                    <h3 class="footer__h3-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+                    <form class="footer__form-content">
+                        <input name="footer__email" class="footer__input" type="email" placeholder="E-mail">
+                        <button class="footer__submit" type="submit">
+                            Підписатися
+                            <svg width="24px" height="24px">
+                                <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#subscribe"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal__close" data-modal-close>
+                <svg width="11px" height="11px">
+                    <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#modal-close"></use>
+                </svg>
+            </button>
+            <form class="modal-form" modal-form>
+                <h3 class="modal__title">Залиште свої дані, ми вам передзвонимо</h3>
+                <div class="modal__main-content-form">
+                    <label class="modal__label">
+                        Ім'я
+                        <div class="modal__input">
+                            <svg width="12px" height="12px">
+                                <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#modal-name"></use>
+                            </svg>
+                            <input class="input" type="text" name="name" required>
+                        </div>
+                    </label>
+                    <label class="modal__label">
+                        Телефон
+                        <div class="modal__input">
+                            <svg width="14px" height="14px">
+                                <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#modal-phone"></use>
+                            </svg>
+                            <input class="input" type="tel" name="tel" required>
+                        </div>
+                    </label>
+                    <label class="modal__label">
+                        Пошта
+                        <div class="modal__input">
+                            <svg width="16px" height="12px">
+                                <use href="/webstudio-vite/assets/symboldefs-20bf8983.svg#modal-mail"></use>
+                            </svg>
+                            <input class="input" type="email" name="email" required>
+                        </div>
+                    </label>
+                    <label class="modal__label modal__label--textarea-margin">
+                        Коментар
+                        <textarea class="modal__textarea-comment" name="comment" placeholder="Введіть текст"
+                            required></textarea>
+                    </label>
+                </div>
+                <label class="modal__label-comment">
+                    <input type="checkbox" name="checkbox" required>
+                    Погоджуюся з розсилкою та приймаю
+                    <a href="#" class="modal__link"> Умови договору</a>
+                </label>
+                <button class="modal__submit" type="submit" modal-submit>Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <!--! Скрипт модалки -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
+    <script src="./js/objects.js"></script>
+</body>
+
+</html>
