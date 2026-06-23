@@ -29,31 +29,31 @@ const mobile_social_links = [
 
 const our_features_list = [
     {
-        img: "../images/antenna.svg",
+        img: "/images/antenna.svg",
         title: "УВАГА ДО ДЕТАЛЕЙ",
         description: "Ідейні міркування, і навіть початок повсякденної роботи з формування позиції."
     },
     {
-        img: "../images/clock.svg",
+        img: "/images/clock.svg",
         title: "ПУНКТУАЛЬНІСТЬ",
         description: "Завдання організації, особливо рамки і місце навчання кадрів тягне у себе."
     },
     {
-        img: "../images/diagram.svg",
+        img: "/images/diagram.svg",
         title: "ПЛАНУВАННЯ",
         description: "Так само консультація з широким активом значною мірою зумовлює."
     },
     {
-        img: "../images/astronaut.svg",
+        img: "/images/astronaut.svg",
         title: "СУЧАСНІ ТЕХНОЛОГІЇ",
         description: "Значимість цих проблем настільки очевидна, що реалізація планових завдань."
     }
 ];
 
 const what_we_do_list = [
-    { img: "./images/programming-1x.jpg", overlay: "Десктопні додатки" },
-    { img: "./images/development-1x.jpg", overlay: "Мобільні додатки" },
-    { img: "./images/design-1x.jpg", overlay: "Дизайнерські рішення" }
+    { img: "/images/programming-1x.jpg", overlay: "Десктопні додатки" },
+    { img: "/images/development-1x.jpg", overlay: "Мобільні додатки" },
+    { img: "/images/design-1x.jpg", overlay: "Дизайнерські рішення" }
 ];
 
 const regular_customers = [
@@ -81,21 +81,21 @@ const footer_social_links = [
 const portfolio_filters = ["Усі", "Веб-сайти", "Додатки", "Дизайн", "Маркетинг"];
 
 const portfolio_list = [
-    { img: "./images/tehnohrak-mobile-1x.jpg", title: "Технохряк", type: "Веб-сайти" },
-    { img: "./images/poster-mobile-1x.jpg", title: "Постер New Orlean vs Golden Star", type: "Дизайн" },
-    { img: "./images/restaurant-mobile-1x.jpg", title: "Ресторан Seafood", type: "Додатки" },
-    { img: "./images/prime-mobile-1x.jpg", title: "Проєкт Prime", type: "Маркетинг" },
-    { img: "./images/boxes-mobile-1x.jpg", title: "Проєкт Boxes", type: "Додатки" },
-    { img: "./images/inspiration-mobile-1x.jpg", title: "Inspiration has no Borders", type: "Веб-сайти" },
-    { img: "./images/limited-mobile-1x.jpg", title: "Видання Limited Edition", type: "Дизайн" },
-    { img: "./images/lab-mobile-1x.jpg", title: "Проєкт LAB", type: "Маркетинг" },
-    { img: "./images/business-mobile-1x.jpg", title: "Growing Business", type: "Додатки" }
+    { img: "/images/tehnohrak-mobile-1x.jpg", title: "Технохряк", type: "Веб-сайти" },
+    { img: "/images/poster-mobile-1x.jpg", title: "Постер New Orlean vs Golden Star", type: "Дизайн" },
+    { img: "/images/restaurant-mobile-1x.jpg", title: "Ресторан Seafood", type: "Додатки" },
+    { img: "/images/prime-mobile-1x.jpg", title: "Проєкт Prime", type: "Маркетинг" },
+    { img: "/images/boxes-mobile-1x.jpg", title: "Проєкт Boxes", type: "Додатки" },
+    { img: "/images/inspiration-mobile-1x.jpg", title: "Inspiration has no Borders", type: "Веб-сайти" },
+    { img: "/images/limited-mobile-1x.jpg", title: "Видання Limited Edition", type: "Дизайн" },
+    { img: "/images/lab-mobile-1x.jpg", title: "Проєкт LAB", type: "Маркетинг" },
+    { img: "/images/business-mobile-1x.jpg", title: "Growing Business", type: "Додатки" }
 ];
 
 const commonOverlay = "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
 
 let what_we_do = {
-    img: ["./images/programming-1x.jpg", "./images/development-1x.jpg", "./images/design-1x.jpg"],
+    img: ["/images/programming-1x.jpg", "/images/development-1x.jpg", "/images/design-1x.jpg"],
     overlay: ["Десктопні додатки", "Мобільні додатки", "Дизайнерські рішення"]
 };
 
@@ -105,7 +105,7 @@ for (const { img, overlay } of what_we_do_list) {
 
 const team_list = [
     {
-        img: "./images/igor-mobile-1x.jpg",
+        img: "/images/igor-mobile-1x.jpg",
         title: "Ігор Дем'яненко",
         description: "Product Designer",
         social_links: [
@@ -116,7 +116,7 @@ const team_list = [
         ]
     },
     {
-        img: "./images/olga-mobile-1x.jpg",
+        img: "/images/olga-mobile-1x.jpg",
         title: "Ольга Рєпіна",
         description: "Frontend Developer",
         social_links: [
@@ -127,7 +127,7 @@ const team_list = [
         ]
     },
     {
-        img: "./images/mykola-mobile-1x.jpg",
+        img: "/images/mykola-mobile-1x.jpg",
         title: "Микола Тарасов",
         description: "Marketing",
         social_links: [
@@ -138,7 +138,7 @@ const team_list = [
         ]
     },
     {
-        img: "./images/mikhail-mobile-1x.jpg",
+        img: "/images/mikhail-mobile-1x.jpg",
         title: "Михайло Єрмаков",
         description: "UI Designer",
         social_links: [
@@ -186,7 +186,7 @@ let social_links2 = [
 ]
 
 let team = {
-    img: ["./images/igor-mobile-1x.jpg", "./images/olga-mobile-1x.jpg", "./images/mykola-mobile-1x.jpg", "./images/mikhail-mobile-1x.jpg"],
+    img: ["/images/igor-mobile-1x.jpg", "/images/olga-mobile-1x.jpg", "/images/mykola-mobile-1x.jpg", "/images/mikhail-mobile-1x.jpg"],
     title: ["Ігор Дем'яненко", "Ольга Рєпіна", "Микола Тарасов", "Михайло Єрмаков"],
     description: ["Product Designer", "Frontend Developer", "Marketing", "UI Designer"],
     social_links: social_links
@@ -194,25 +194,25 @@ let team = {
 
 let team2 = [
     {
-        img: "./images/igor-mobile-1x.jpg",
+        img: "/images/igor-mobile-1x.jpg",
         title: "Ігор Дем'яненко",
         description: "Product Designer",
         social_links: social_links2[0]
     },
     {
-        img: "./images/olga-mobile-1x.jpg",
+        img: "/images/olga-mobile-1x.jpg",
         title: "Ольга Рєпіна",
         description: "Frontend Developer",
         social_links: social_links2[1]
     },
     {
-        img: "./images/mykola-mobile-1x.jpg",
+        img: "/images/mykola-mobile-1x.jpg",
         title: "Микола Тарасов",
         description: "Marketing",
         social_links: social_links2[2]
     },
     {
-        img: "./images/mikhail-mobile-1x.jpg",
+        img: "/images/mikhail-mobile-1x.jpg",
         title: "Михайло Єрмаков",
         description: "UI Designer",
         social_links: social_links2[3]
@@ -243,7 +243,7 @@ function renderContactsList(selector, items) {
             <li class="contacts-list__item">
                 <a class="contacts-list__link" href="${item.href}">
                     <svg class="contacts-list__svg" width="${item.icon === 'mail' ? '16px' : '10px'}" height="${item.icon === 'mail' ? '12px' : '16px'}">
-                        <use href="./images/symboldefs.svg#${item.icon}"></use>
+                        <use href="/images/symboldefs.svg#${item.icon}"></use>
                     </svg>
                     ${item.text}
                 </a>
@@ -342,7 +342,7 @@ function renderRegularCustomersList(selector, items) {
             <li class="regular-customers-list__item">
                 <a class="regular-customers-list__link" href="#">
                     <svg class="regular-customers-list__svg" width="${item.width}" height="${item.height}">
-                        <use href="./images/symboldefs.svg#${item.icon}"></use>
+                        <use href="/images/symboldefs.svg#${item.icon}"></use>
                     </svg>
                 </a>
             </li>
@@ -376,7 +376,7 @@ function renderFooterSocialList(selector, items) {
             <li class="join-us-list__item">
                 <a class="join-us-list__link" href="${item.href}">
                     <svg class="join-us-list__svg" width="20px" height="20px">
-                        <use href="./images/symboldefs.svg#${item.icon}"></use>
+                        <use href="/images/symboldefs.svg#${item.icon}"></use>
                     </svg>
                 </a>
             </li>
@@ -401,7 +401,7 @@ function renderTeamList(selector, items) {
                         <li class="team-list__social-item">
                             <a class="team-list__social-link" href="${link.href}">
                                 <svg class="team-list__social-svg" width="20px" height="20px">
-                                    <use href="./images/symboldefs.svg#${link.icon}"></use>
+                                    <use href="/images/symboldefs.svg#${link.icon}"></use>
                                 </svg>
                             </a>
                         </li>

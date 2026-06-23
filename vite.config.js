@@ -6,6 +6,7 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   base: '/webstudio-vite/', //! 👈 ВАЖЛИВО: вкажіть базу
   root: 'src',
+  publicDir: '../public',
   build: {
     rollupOptions: {
       //! ❌ Це шукає тільки HTML-файли верхнього рівня src/, і не включає HTML-файли нижнього рівня
