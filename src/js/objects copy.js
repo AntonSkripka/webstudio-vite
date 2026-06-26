@@ -1,6 +1,3 @@
-import Handlebars from "handlebars";
-import сardTemplate from "./what-we-do.hbs?raw";
-console.log(сardTemplate);
 const nav_items = [
     { href: "./index.html", text: "Студія", active: true },
     { href: "./portfolio.html", text: "Портфоліо", active: false },
@@ -319,12 +316,19 @@ function renderFeaturesList(selector, items) {
 }
 
 function renderWhatWeDoList(selector, items) {
-    const template = Handlebars.compile(сardTemplate);
     const whatWeDoList = document.querySelector(selector);
     if (!whatWeDoList) return;
     
-    const markup = template(items);
-    console.log(markup);
+    const markup = items
+        .map(item => `
+            <li class="what-we-do-list__item">
+                <picture class="what-we-do-list__img">
+                    <img src="${item.img}" alt="${item.overlay}">
+                </picture>
+                <h3 class="what-we-do-list__overlay">${item.overlay}</h3>
+            </li>
+        `)
+        .join("");
     
     whatWeDoList.innerHTML = markup;
 }
