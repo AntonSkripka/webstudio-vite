@@ -1,5 +1,9 @@
 import Handlebars from "handlebars";
-import сardTemplate from "./what-we-do.hbs?raw";
+import сardTemplate from "../templates/what-we-do.hbs?raw";
+// import ourTeamTemplate from "../templates/our-team.hbs?raw";
+import developerTemplate from "../templates/our-team.hbs?raw";
+console.log(developerTemplate);
+
 console.log(сardTemplate);
 const nav_items = [
     { href: "./index.html", text: "Студія", active: true },
@@ -383,29 +387,11 @@ function renderFooterSocialList(selector, items) {
 }
 
 function renderTeamList(selector, items) {
+    const template = Handlebars.compile(developerTemplate);
     const teamList = document.querySelector(selector);
     if (!teamList) return;
     
-    const markup = items
-        .map(member => `
-            <li class="team-list__item">
-                <img class="team-list__img" src="${member.img}" alt="Фото ${member.title}">
-                <h3 class="team-list__title">${member.title}</h3>
-                <p class="team-list__description">${member.description}</p>
-                <ul class="team-list__social-list">
-                    ${member.social_links.map(link => `
-                        <li class="team-list__social-item">
-                            <a class="team-list__social-link" href="${link.href}">
-                                <svg class="team-list__social-svg" width="20px" height="20px">
-                                    <use href="images/symboldefs.svg#${link.icon}"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    `).join('')}
-                </ul>
-            </li>
-        `)
-        .join("");
+    const markup = template(items);
     
     teamList.innerHTML = markup;
 }
